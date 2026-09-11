@@ -1,0 +1,9 @@
+name: PlotMenu
+version: 2.1
+main: de.deinname.plotmenu.PlotMenuPlugin
+api-version: '1.21'
+depend: [PlotSquared]
+commands:
+  plotgui:
+    description: Öffnet das Plot-Kategoriemenü.
+    permission: plotmenu.use
