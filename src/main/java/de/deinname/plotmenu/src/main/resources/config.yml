@@ -1,0 +1,66 @@
+gui:
+  main-title: "&8Plot-Kategorien"
+  sub-title-prefix: "&8Kategorie: "
+  rows: 3 # 3 Reihen = 27 Slots (Slots gehen von 0 bis 26)
+  filler: "GRAY_STAINED_GLASS_PANE"
+
+messages:
+  success: "&aDein Plot-Design wurde erfolgreich angepasst!"
+  no-permission-gui: "&cDu hast keine Rechte für dieses Menü."
+  no-permission-action: "&cDir fehlt die Berechtigung für diesen Block!"
+
+# Hier kannst du beliebig viele Kategorien und Blöcke hinzufügen!
+categories:
+
+  # --- KATEGORIE 1: HOLZARTEN ---
+  holz:
+    name: "&6&lHolz-Designs"
+    icon: "OAK_LOG" # Welcher Block wird im Hauptmenü angezeigt
+    slot: 11        # Position im Hauptmenü (Slot 11)
+    items:
+      eichen_boden:
+        material: "OAK_PLANKS"
+        slot: 10    # Position im Untermenü
+        name: "&6Eichenholzboden"
+        lore:
+          - "&7Ändert den Boden zu Eichenholz."
+        permission: "plotmenu.wood.floor"
+        action: "floor oak_planks"
+      fichten_wand:
+        material: "SPRUCE_PLANKS"
+        slot: 12
+        name: "&eFichtenholzwand"
+        lore:
+          - "&7Ändert die Wand zu Fichtenholz."
+        permission: "plotmenu.wood.wall"
+        action: "wall spruce_planks"
+
+  # --- KATEGORIE 2: GLAS ---
+  glas:
+    name: "&b&lGlas-Designs"
+    icon: "GLASS"
+    slot: 13
+    items:
+      glas_rand:
+        material: "GLASS"
+        slot: 11
+        name: "&bGlas-Rand"
+        lore:
+          - "&7Ändert den Rand zu Glas."
+        permission: "plotmenu.glass.border"
+        action: "border glass"
+
+  # --- BEISPIEL FÜR EINE NEUE KATEGORIE (EINFACH KOPIEREN & ANPASSEN) ---
+  erze:
+    name: "&a&lWertvolle Erze"
+    icon: "DIAMOND_ORE"
+    slot: 15 # Position im Hauptmenü
+    items:
+      dia_boden:
+        material: "DIAMOND_BLOCK"
+        slot: 13
+        name: "&bDiamanten-Boden"
+        lore:
+          - "&7Mache deinen Boden zu purem Diamant!"
+        permission: "plotmenu.erz.diamant"
+        action: "floor diamond_block"
